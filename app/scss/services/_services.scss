@@ -1,0 +1,29 @@
+.services {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-right: -15px;
+        margin-left: -15px;
+        &__item {
+            border: 1px solid #e1e1e1;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-right: 15px;
+            margin-left: 15px;
+            text-align: center;
+            width: calc(25% - 30px);
+        }
+        &__icon {
+            margin-bottom: 25px;
+        }
+        &__title {
+            color: $titleColor;
+            font-family: "Raleway-ExtraLight";
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+    }
+}

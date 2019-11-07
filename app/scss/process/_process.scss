@@ -1,0 +1,8 @@
+.process {
+    background-image: url(../images/bg-proc.jpg);
+    color: $textColorLight;
+    &-list {
+        display: flex;
+        list-style: none;
+    }
+}
