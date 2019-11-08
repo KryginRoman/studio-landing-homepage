@@ -1,0 +1,51 @@
+.journals {
+    &-list {
+        display: flex;
+        list-style: none;
+        margin-right: -15px;
+        margin-left: -15px;
+        &__item {
+            margin-right: 15px;
+            margin-left: 15px;
+            line-height: 1.78;
+            width: calc(33.333% - 30px);
+        }
+        &__info {
+            padding-top: 20px;
+        }
+        &__header {
+            display: flex;
+        }
+        &__data {
+            border: 1px solid $textColorDark;
+            // padding: 10px;
+            margin-right: 15px;
+            text-align: center;
+            height: 48px;
+            width: 45px;
+        }
+        &__day, &__month {
+            display: block;
+            text-transform: uppercase;
+        }
+        &__title {
+            color: $textColorDark;
+            font-family: "Raleway-ExtraLight";
+            font-size: 1.6rem;
+            line-height: 1.625;
+        }
+        &__article, &__comments {
+            color: $accentColor;
+            font-size: 1.2rem;
+            line-height: 1.625;
+        }
+        &__article {
+            padding-right: 5px;
+            margin-right: 5px;
+            border-right: 1px solid $accentColor;
+        }
+        &__description {
+            padding-top: 10px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box; }
 
-h1, h2, h3, h4, h5, h6, p, ul {
+h1, h2, h3, h4, h5, h6, p, ul, figure {
   margin: 0;
   padding: 0; }
 
@@ -62,10 +62,10 @@ body {
       width: 80px; }
     .section__title::before {
       left: 0;
-      transform: translate(-50%, -100%); }
+      transform: translateX(-100%); }
     .section__title::after {
       right: 0;
-      transform: translate(-50%, 100%); }
+      transform: translateX(100%); }
   .section__description {
     margin-bottom: 30px; }
 
@@ -165,10 +165,179 @@ body {
 
 .process {
   background-image: url(../images/bg-proc.jpg);
+  background-size: cover;
+  background-position: top center;
   color: #d0d0d0; }
   .process-list {
     display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 25px;
+    padding-right: 25px; }
+    .process-list__item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 135px;
+      text-align: center; }
+    .process-list__icon {
+      border: 2px solid #1abb9c;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      position: relative;
+      height: 95px;
+      width: 95px;
+      transition: all .4s; }
+      .process-list__icon::after {
+        background-color: #777777;
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -25px;
+        height: 1px;
+        width: 190px;
+        transform: translateX(100%); }
+      .process-list__icon:hover {
+        background-color: #1abb9c; }
+    .process-list__svg {
+      fill: #fff; }
+
+.projects {
+  color: #d0d0d0; }
+  .projects-list {
+    display: flex;
+    list-style: none;
+    margin-right: -15px;
+    margin-left: -15px; }
+    .projects-list__item {
+      margin-right: 15px;
+      margin-left: 15px;
+      text-align: center;
+      width: calc(33.333% - 30px); }
+    .projects-list__title {
+      color: #606060;
+      font-family: "Raleway-ExtraLight";
+      font-size: 1.5rem;
+      padding-top: 15px;
+      padding-left: 25px;
+      padding-right: 25px;
+      text-transform: uppercase; }
+    .projects-list__subtitle {
+      color: #1abb9c;
+      display: block;
+      font-size: 1.2rem;
+      padding-top: 10px; }
+    .projects-list__text {
+      padding-top: 15px;
+      line-height: 1.78; }
+
+.testimonials {
+  background-image: url(../images/bg12.jpg);
+  background-size: cover;
+  background-position: top center;
+  color: #d0d0d0; }
+  .testimonials-list {
     list-style: none; }
+    .testimonials-list__item {
+      text-align: center;
+      line-height: 1.75; }
+    .testimonials-list__text {
+      font-family: "Raleway-Light";
+      font-size: 2rem; }
+    .testimonials-list__author {
+      color: #1abb9c;
+      display: block;
+      font-family: "Raleway-ExtraLight";
+      font-size: 1.2rem;
+      padding-top: 10px;
+      text-transform: uppercase; }
+
+.journals-list {
+  display: flex;
+  list-style: none;
+  margin-right: -15px;
+  margin-left: -15px; }
+  .journals-list__item {
+    margin-right: 15px;
+    margin-left: 15px;
+    line-height: 1.78;
+    width: calc(33.333% - 30px); }
+  .journals-list__info {
+    padding-top: 20px; }
+  .journals-list__header {
+    display: flex; }
+  .journals-list__data {
+    border: 1px solid #7a7a7a;
+    margin-right: 15px;
+    text-align: center;
+    height: 48px;
+    width: 45px; }
+  .journals-list__day, .journals-list__month {
+    display: block;
+    text-transform: uppercase; }
+  .journals-list__title {
+    color: #7a7a7a;
+    font-family: "Raleway-ExtraLight";
+    font-size: 1.6rem;
+    line-height: 1.625; }
+  .journals-list__article, .journals-list__comments {
+    color: #1abb9c;
+    font-size: 1.2rem;
+    line-height: 1.625; }
+  .journals-list__article {
+    padding-right: 5px;
+    margin-right: 5px;
+    border-right: 1px solid #1abb9c; }
+  .journals-list__description {
+    padding-top: 10px; }
+
+.footer {
+  background-color: #373737;
+  color: #d0d0d0;
+  line-height: 1.7; }
+  .footer-container {
+    padding-top: 60px;
+    padding-bottom: 60px; }
+  .footer-list {
+    display: flex;
+    list-style: none;
+    margin-right: -15px;
+    margin-left: -15px; }
+  .footer-item {
+    margin-right: 15px;
+    margin-left: 15px;
+    width: calc(25% - 30px); }
+    .footer-item__title {
+      font-family: "Raleway-Bold";
+      text-transform: uppercase;
+      padding-bottom: 20px; }
+    .footer-item___second-part {
+      padding-top: 25px; }
+  .footer-contacts {
+    list-style: none;
+    padding-top: 25px; }
+    .footer-contacts__link:hover .footer-contacts__icon path, .footer-contacts__link:focus .footer-contacts__icon path {
+      fill: #1abb9c; }
+    .footer-contacts__icon {
+      margin-right: 10px; }
+      .footer-contacts__icon path {
+        fill: #cacaca;
+        transition: all .4s; }
+  .footer-twitter {
+    list-style: none; }
+    .footer-twitter__item:not(:first-child) {
+      padding-top: 25px; }
+  .footer-posts__list {
+    list-style: none; }
+  .footer-posts__item:not(:first-child) {
+    padding-top: 25px; }
+  .footer-posts__date {
+    padding-top: 10px;
+    font-size: 1.2rem; }
+  .footer-copyright {
+    background-color: #333333;
+    padding-top: 35px;
+    padding-bottom: 35px; }
 
 @font-face {
   font-family: "Raleway-Thin";

@@ -1,0 +1,25 @@
+.testimonials {
+    background-image: url(../images/bg12.jpg);
+    background-size: cover;
+    background-position: top center;
+    color: $textColorLight;
+    &-list {
+        list-style: none;
+        &__item {
+            text-align: center;
+            line-height: 1.75;
+        }
+        &__text {
+            font-family: "Raleway-Light";
+            font-size: 2rem;
+        }
+        &__author {
+            color: $accentColor;
+            display: block;
+            font-family: "Raleway-ExtraLight";
+            font-size: 1.2rem;
+            padding-top: 10px;
+            text-transform: uppercase;
+        }
+    }
+}

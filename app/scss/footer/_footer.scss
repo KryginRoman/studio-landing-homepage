@@ -1,0 +1,71 @@
+.footer {
+    background-color: #373737;
+    color: $textColorLight;
+    line-height: 1.7;
+    &-container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &-list {
+        display: flex;
+        list-style: none;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    &-item {
+        margin-right: 15px;
+        margin-left: 15px;
+        width: calc(25% - 30px);
+        &__title {
+            font-family: "Raleway-Bold";
+            text-transform: uppercase;
+            padding-bottom: 20px;
+        }
+        &___second-part {
+            padding-top: 25px;
+        }
+    }
+    &-contacts {
+        list-style: none;
+        padding-top: 25px;
+        &__link {
+            &:hover, &:focus {
+                .footer-contacts__icon {
+                    path {
+                        fill: $accentColor;
+                    }
+                }
+            }
+        }
+        &__icon {
+            margin-right: 10px;
+            path {
+                fill: #cacaca;
+                transition: all .4s;
+            }
+        }
+    }
+    &-twitter {
+        list-style: none;
+        &__item:not(:first-child) {
+            padding-top: 25px;
+        }
+    }
+    &-posts {
+        &__list {
+            list-style: none;
+        }
+        &__item:not(:first-child) {
+            padding-top: 25px;
+        }
+        &__date {
+            padding-top: 10px;
+            font-size: 1.2rem;
+        }
+    }
+    &-copyright {
+        background-color: #333333;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}

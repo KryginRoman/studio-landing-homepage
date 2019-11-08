@@ -1,8 +1,45 @@
 .process {
     background-image: url(../images/bg-proc.jpg);
+    background-size: cover;
+    background-position: top center;
     color: $textColorLight;
     &-list {
         display: flex;
+        justify-content: space-between;
         list-style: none;
+        padding-left: 25px;
+        padding-right: 25px;
+        &__item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: 135px;
+            text-align: center;
+        }
+        &__icon {
+            border: 2px solid $accentColor;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            position: relative;
+            height: 95px;
+            width: 95px;
+            transition: all .4s;
+            &::after {
+                background-color: #777777;
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -25px;
+                height: 1px;
+                width: 190px;
+                transform: translateX(100%);
+            }
+            &:hover {
+                background-color: $accentColor;
+            }
+        }
+        &__svg {
+            fill: #fff;
+        }
     }
 }
