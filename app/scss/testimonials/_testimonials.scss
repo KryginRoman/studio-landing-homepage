@@ -23,3 +23,29 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    .testimonials {
+        &-list {
+            &__text {
+                font-size: 1.7rem;
+            }
+            &__author {
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .testimonials {
+        &-list {
+            &__text {
+                font-size: 1.4rem;
+            }
+            &__author {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

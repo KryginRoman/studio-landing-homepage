@@ -2,6 +2,7 @@
     color: $textColorLight;
     &-list {
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         margin-right: -15px;
         margin-left: -15px;
@@ -29,6 +30,40 @@
         &__text {
             padding-top: 15px;
             line-height: 1.78;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .projects {
+        &-list {
+            &__text {
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .projects {
+        &-list {
+            &__item {
+                margin-bottom: 15px;
+                width: calc(50% - 30px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .projects {
+        &-list {
+            &__item {
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 370px;
+                width: calc(100% - 30px);
+            }
         }
     }
 }

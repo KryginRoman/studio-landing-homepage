@@ -1,6 +1,7 @@
 .journals {
     &-list {
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         margin-right: -15px;
         margin-left: -15px;
@@ -18,7 +19,6 @@
         }
         &__data {
             border: 1px solid $textColorDark;
-            // padding: 10px;
             margin-right: 15px;
             text-align: center;
             height: 48px;
@@ -46,6 +46,39 @@
         }
         &__description {
             padding-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .journals {
+        &-list {
+            &__info {
+                padding-top: 15px;
+            }
+            &__data {
+                margin-right: 5px;
+            }
+            &__title {
+                font-size: 1.5rem;
+            }
+            &__description {
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .journals {
+        &-list {
+            &__item {
+                max-width: 370px;
+                width: calc(50% - 30px);
+            }
+            &__description {
+                font-size: 1.3rem;
+            }
         }
     }
 }

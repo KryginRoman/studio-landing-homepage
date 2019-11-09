@@ -5,6 +5,7 @@
     color: $textColorLight;
     &-list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         list-style: none;
         padding-left: 25px;
@@ -15,16 +16,7 @@
             flex-direction: column;
             max-width: 135px;
             text-align: center;
-        }
-        &__icon {
-            border: 2px solid $accentColor;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            position: relative;
-            height: 95px;
-            width: 95px;
-            transition: all .4s;
-            &::after {
+            &:not(:last-child) .process-list__icon::after{
                 background-color: #777777;
                 content: "";
                 position: absolute;
@@ -34,12 +26,92 @@
                 width: 190px;
                 transform: translateX(100%);
             }
+        }
+        &__icon {
+            border: 2px solid $accentColor;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            position: relative;
+            height: 95px;
+            width: 95px;
+            transition: all .4s;
             &:hover {
                 background-color: $accentColor;
             }
         }
-        &__svg {
-            fill: #fff;
+        &__img {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .process {
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding-left: 0;
+            padding-right: 0;
+            &__item {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                &:not(:last-child) .process-list__icon::after{
+                    background-color: #777777;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -25px;
+                    height: 1px;
+                    // width: 190px;
+                    transform: translateX(100%);
+                }
+            }
+            &__icon {
+                border: 2px solid $accentColor;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                position: relative;
+                height: 95px;
+                width: 95px;
+                transition: all .4s;
+                &:hover {
+                    background-color: $accentColor;
+                }
+            }
+            &__img {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .process {
+        &-list {
+            // justify-content: center;
+            &__item {
+                width: 50%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .process {
+        &-list {
+            justify-content: center;
         }
     }
 }

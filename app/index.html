@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Studio</title>
+    <link rel="stylesheet" href="./css/lib.min.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
@@ -31,15 +32,32 @@
                     a creative media agency that believes in the power of creative ideas and great design.
                 </p>
             </div>
-            <ul class="header-slider">
-                <li class="header-slider__item">
-                    <img src="./images/slider-bg-1.jpg" class="image" alt="slider-image">
-                    <div class="header-slider__text">
-                        <span class="header-slider__title">Stationery Branding Mockup</span>
-                        <span class="header-slider__description">Etiam porta sem malesuada magna mollis euismod</span>
-                    </div>
-                </li>
-            </ul>
+            <div class="header-slider__wrapper">
+                <ul class="header-slider">
+                    <li class="header-slider__item">
+                        <img src="./images/slider-bg-1.jpg" class="image" alt="slider-image">
+                        <div class="header-slider__text">
+                            <span class="header-slider__title">Stationery Branding Mockup</span>
+                            <span class="header-slider__description">Etiam porta sem malesuada magna mollis euismod</span>
+                        </div>
+                    </li>
+                    <li class="header-slider__item">
+                        <img src="./images/slider-bg-1.jpg" class="image" alt="slider-image">
+                        <div class="header-slider__text">
+                            <span class="header-slider__title">Stationery Branding Mockup</span>
+                            <span class="header-slider__description">Etiam porta sem malesuada magna mollis euismod</span>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#!" class="header-slider-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="header-slider__svg" viewBox="0 0 8 13">
+                        <g><g>
+                            <path d="M7.955 2.13L3.962 6.456l4.034 4.37L6 12.99.01 6.5 6 .013z"/>
+                        </g></g>
+                    </svg>
+                </a>
+                <div class="placeholder-arrow"></div>
+            </div>
         </div>
     </header>
     <main>
@@ -51,7 +69,7 @@
                 <ul class="services-list">
                     <li class="services-list__item">
                         <div class="services-list__icon">
-
+                            <img src="./svg/services/print.svg" alt="icon">
                         </div>
                         <h4 class="services-list__title">Print Design</h4>
                         <p class="services-list__text">
@@ -61,7 +79,7 @@
                     </li>
                     <li class="services-list__item">
                         <div class="services-list__icon">
-                            
+                            <img src="./svg/services/tv.svg" alt="icon">
                         </div>
                         <h4 class="services-list__title">Motion video</h4>
                         <p class="services-list__text">
@@ -71,7 +89,7 @@
                     </li>
                     <li class="services-list__item">
                         <div class="services-list__icon">
-                            
+                            <img src="./svg/services/gift.svg" alt="icon">
                         </div>
                         <h4 class="services-list__title">Package Design</h4>
                         <p class="services-list__text">
@@ -81,7 +99,7 @@
                     </li>
                     <li class="services-list__item">
                         <div class="services-list__icon">
-                            
+                            <img src="./svg/services/clock.svg" alt="icon">
                         </div>
                         <h4 class="services-list__title">Time management</h4>
                         <p class="services-list__text">
@@ -105,7 +123,7 @@
                 <ul class="process-list">
                     <li class="process-list__item">
                         <div class="process-list__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="process-list__svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="48" viewBox="0 0 30 48"><g><g><image width="30" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAwCAYAAAAGlsrkAAAEpklEQVRYR+2YaahWVRSGH7M5LUuSgjKjQUttJqJ+ZCYhWjZhShpYWTQXlRYNKEEmWkFFmqhp0QQNFuKQohSUEDRoczTPc5FU2hzPZe3YHs937vm89/sTLrjcc8/dZ71nr73Wu951utC87QL0BXoBXYB1wEfA+8Cfdd35YB3rB5wNjAC8LrOfgWeBR4BHgd+qHLcHvA8wHTgldqevr4DXgc/C8XbAfsBBwJZx70vgJmA28FfZC1QBXwTcBmwL/AjcAzwMvNZgJ92AYcD5wPGxZhVwJvBx8ZkyYO/dCVwC/B3Xk4C1dc4k1hwLzAQOAL4GhgMv5c+XAd8VoD8BZwDLmgDMl24foXbH+joaeDMtKAKPj8UuHAK8uImguf9ZwHnAu8ARKXI58J7AG0A6q6UdBE2Pd42oDQZmABf7jxx4HjAukujCTgJNbtyUYTb8A71OwLsDnwDrgb2B7zoZWHeTAZN0LjA+AV8F3ArMifNoAS67AZ8G0/VKwE8DJwBDAa9bZSsAz3pIAv4e6AHsCPzSKtQs3BMF7h4p/jmwRwtBdT0GeMAEFrh3UNqrwMEtBj4ZeBK4T+BdgW+A94Lsy7ClTzl4G0D+vT3jbBvDOcBYwLJZDVwJfFji6DTgcWCewFsBv0YpGfai2ZkWFG7+HjW/GHgKkJtzM3qHAP8U7l8G3AFMTcn1djR32+AHhcWJu921vfZS4IZwansUwN92MwFtBvrZN8RB7k76NHLnJuDEWjb7+QVgO5VgspmtURPk7ri2NgX/IZhQIjJJJSV7d25pgwMS8FnA/RE2Q5ubtb0k5M1h0Zu3iDM0MS8A3Inmy8nHrwCuze3A6AVf+GIJeCdA1aDDPiVvmgjGxDGR1kRI3elIYFG00lti177s8gKwSubqOOMr8iYhh+p0CnB94aGegIl0ZNxXT5nhmtJGwWCSem33SRFIbiQnBaEE1R94Kwc2FMoaM3z/iECOrwS6PETfXpFc6i1FnsAKvZuBFwov7Z9TgWuihk/1RlEI3BuOVYmqjyqzxMyH44BnKhYOCEFhXz40KmAjYMlEMeBv1Yjhb2R1gO2/Eo6MOC123eavTHNJazqVJDxTa7PM6gCnun0ZOCZIqiGw/zA7rwWsO8vCaaFo7QEnXla/HV4kk0a62vN4DjiqGKIMvQrYMccjs/nL4Q8W37pK0DsdWLdbhzq0dnOrAlZTSyx2orYsbgbYtY4hNwZzOSXUAXagk7v/iDlLCm0a2G5lu3Qy9KylwmSNduy8ZEWo4SaUpmWDrC6uvS6I4T9NHAvKgNXk9nap1978bUeAdWC47EI2haodnw48BjwBeN3Q2htTfdBdOJLaSNy19a2dFH1XoDSyWvfOSBuQxaacsc84jKsymrF3Kgb4Nj91dpykz0pANVJlO4SKtBM5kXQo1AlYZaJCqTLbn0P8ZuCNotTMGW8OdVmS/b+SK9Wx4sCf3JyfnK937sw6PhFYmKGoKgdl361MUIcBG34yX8xvXB0iEAXbxOBqxb6E4mgyOr5fjQqZZCdKSsPJo/L7WJ1yyt/a9Q8FaH7fjzZ+F3u+LqE3C6xfhb3dx3apKeb9aOMua9u/hJce6lrrbGEAAAAASUVORK5CYII="/></g></g></svg>
+                            <img src="./svg/process/light_bulb.svg" class="process-list__img" alt="list__icon">
                         </div>
                         <h4 class="process-list__title">
                             1. creatıve ideas
@@ -113,7 +131,7 @@
                     </li>
                     <li class="process-list__item">
                         <div class="process-list__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="48" viewBox="0 0 30 48"><g><g><image width="30" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAwCAYAAAAGlsrkAAAFHklEQVRYR6WYZ6wVVRSFP8SGQcWgUWONsSKK3Rgb9m7wh1HBWNCggmhssffeUcEWAQlIjLGiqITYiAUsiQXsPbGjxhaxm4/sY8bJvXNm5u3k/Xh37ux1zj57rb3O7UW7GAzsBCwCPAvMBP5ukqpXky8DKwF3ATuX3nsZOAj4sG6+JsArA7OAtYG3gYnAX8AwYFPgG2Ab4IM64HWBLenTwPbAtNjdggBYFLgDOByYB2wBpGdd11AXeCQwLna6GfBrKWNv4KlY2EXA+bld1wHuE+XzfLcFXuiSdB1gLvA7sDrwfRV4HeCjopTTgX0zO7kFOBY4A7iyp8CWUPrsBTyeAd4YeC12vlFPgPsB3wLfBZXs4lzYYAOAtYCPun05V2p3+ShwL3BgDjGejwVGAYcG5zu+lgM+CbgOuAC4sECf0cB+gN38GDCmQKHEgHOAS9vu+GzgEuBk4HrAhd4HHFBKqLDsAvwJHAlMAK4BTmsLPBwYD1wBnAnsEQ2mNKpYAikegwLwzujoy4FTgWvbAicg9dkzOy9KfgJwUyQ9BJgK3BZUSmfs53e3Bd4AeDPk0mkk4A1RhaMjqUp1bpyn5/oAMATYDniuLfAywA/Ae8C6gIPCAeHnTwC/hKhYcsvtsxeBLYE1gU/aAvvej8BigNJpOBItvRJqyHHV7cH4/wtgRWDJkM9WdPIlS23JVwDmRxYXsXXQaXbs3Ecu8Dfgq6hOV+rneOyLM4DdgU1CDqt0ZA3gY0BjYLl7BCwn5aYDwkFRFU4vrdBD0WA9Ak5d69SRMlWh/ZFCzu7j2+xYwfgpKCKg4+7i4HFVvlNCsc4CFBEX2h+Q038UX+x0xscAtxZG2z7AI+GxVLKqUNfV98OAycH/HYGrgNOrgOXqq4A+Sn81J/jpZzbZnhlgy2y51e0nAV3JK0BfYLfg/sIU5R3bPHuHLDqRDGn0NfBWzNkq7OfDaa4PvBNfTBV8HxgYdPsfcJq978Yui05Rc+cZqVhV8SmwGrBUwRC6uWeigv8NjuKO5d7mUap7StldjGUT2KbrFFpgF+tzG6oYOlPz673l+oIEvEOsSgBVqnwd0VPbJFoaS94p1PHPgTcAvVc5Hg4tsEEnJuDkDrUsN3d4aUrMX5vLJusUW0Uz6kjsk3L4mT3kcNk1AX8Wou+q1eP9geOiM7WpclLL6jBQyTqFruR+4HbAhjoiFE8jYbf/Exq+NNBP4KSvdp325sQYgSb3Bck/IsTAJnMIdIrFo6mSeGiZtE6GG9Mg2MAe62CBHfByrhjSQs+k5nreywI2nOWsCs9XHjsaDfmsmnlExUYe7j9JmQSwAa6ucg4Z4G6PNfcaPxdlZUYLrEUdCrwUDiKX29ugJkAZNayYi5aruVg1Gm9qnXlcTCYVdJU2itTylqFoaAySBc6BL3zeBFj9VjqXi8wOBJ1GupzZeKvkbolpVU2ANW/ehfwTwPKqVKqZPttfCiqdZbEUTYCVQTnuHVgffVlh5041HcqG4dGy5W4CbDJ12Iu3i9Dm6CRVotcBO1dx+DmL2vCMzZfGngr3ZQAsEd7bRvMIakXTHetMlENviolOuklNvL916UZrRVPgdAVVDr22GA4W5dAzTxKZBW8KnHan2CT5dOeqn39e4mtFU2BVTh1ePs7T643D3bDhyj9DdV1EU2AT3ajWhvjbUN6JHSDqcO1oA7xecFVQBUSPVVs40sraAPuuI9NxZ0yKoV97t36xLbDG7mBADmvcvR83in8BXgEeY4Sb/9AAAAAASUVORK5CYII="/></g></g></svg>
+                            <img src="./svg/process/rocket.svg" class="process-list__img" alt="list__icon">
                         </div>
                         <h4 class="process-list__title">
                             2. rapid solution
@@ -121,7 +139,7 @@
                     </li>
                     <li class="process-list__item">
                         <div class="process-list__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="48" viewBox="0 0 36 48"><g><g><image width="36" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAwCAYAAAB5R9gVAAAFPklEQVRYR+2Zd6gdVRCHv9hjF02MGHvDhhVRFDsqahI1Go1do/iHmhjsig0UEQtqJIK9JVGsibFFsWCvGDTYSwyWYBd7bHyPOeFk3Xt37159f72Bx7t3d8/s78yZmd/M3H5UyyLAScBwYOnqx0uf+Aq4DbgK+LOdjn4VL1gQeBTYriGQ4rJ7gH2Bv1vpqwJ0HDAO+Ag4AHi3IbCNgYnACgHo7qaAHgB2B/YG7msIJi07No7sRuDIpoCeALYHNgFe7xLQDsDjsTE3WCpVR5YAbQW80CWgfQCP6k5gRFNAVwCj4/wPbueMNYLDI/f4TwMuagpo1TiqpYA3w+SnAr/WtNYy8XKPfS3gU2A94IemgFy3BXANsFEo2RZ4uiagvYB749nngEOAD7vJQ/nah4FdAZ3zyQ4BTQIOrLOmyqlzHe7UHTcBdBNwRB+gEgskH+qzUCv36LNQVeD8bxYyPbwHrNEh0e4c9ZRJcesq9N6vm4e2iexsPbROKF4AkEaGAr8BNwBGUy4LBV0sF+sq66m6gKSOo4GzgPPjjelaDuD4qHnyaxZ4Fnquc31bqQOoP/A5sASwGvAJIGl+CfweDL4ycHPwlMeai1z4Yqxz/V/dctnIKD8srnYKZSvFCz4DrAiWDdBfAx5PUWYEy7tePS2ljoUeAnYDDgNuyTS9CmwKvA0sBghSPxpV8jZroAvDiod3A8iifBbwSxToP2bKrGsmA2vGtWeAYcA3JS9cMSz6c4meeR6vstApUWC14qL5Iw0I2GNpJ48AuwTrF6Nx7roqQG8AGwA7AtbX3Ygl8K3hQ8kX/6WvHaDNgFeAjyMhto2OFkhtNFcB7Ms8TkGpx0hUb0eAUoH/LHBXttI0sHDh++KRFpYErL9tuZcHBgIea1HyfFbLh9yZBfmAbs4ImB3ObE/3fDi83Yc0tHYnFkqkaEjfkS2ULv7IvvvZyLOL+Cn+vgXMT27IxJmLLiJ9GJlymxxXy0I2dDZ2tr/ju7RScfk5wLnRyRxTB5BZ1x06oTAPuWNFEj07HPKd+DytAVjp4wPg+9A/T49XFmVp4pG3vGbqBwvVgcel2V9qAMo2yhGPtHR78UyL+iRCCXEIMDVuPgXYIJ4R45nT47MWslfrVJx+XB+b3KMdIOnAjGt0DM4c2PmQJDoo7hkhHlteHyW9iwIOJ/xvUBhRRTE9WEGYPuRAP/dI8cgkQInwMuDETMv9wJ5BjtcBY2LwZH7aL3vuBOA8wBcmeSzmQXJiLhOimz0ZuKQM0HyRMyRCM+v0bLXzIft5WT2JTqkl3ooLidENBp/9IvzEBGlW3hywPEkir8lvDjE2LAOUHjCJCaAo64fVVo/juhh4Px7yKB0imFDNYU7eFDO4FYFceGkMT5NeM/hMQANIU695Iz8yp6QHAWOBy0sAtbvkVMNaqWwYJTlL0oZ6KlWSLudEVhTSlMc9F1ByMneok+nUnYg+5Sb0QSMxFx3XXPNdlL75vRRElsNaak6yUArDKcHKnYDxWR1exzcnbVmYtBnWpo+XI50UdXtd/+oZrCZAKVEZMTmz1wXmcN0UoHWvBs4Mi9iXWQPp2K1oyE7lSsAZ9nAB2TEYBZaems0eq4mYec3m5h9rHvVYqihy4/4tpvg2BYmqBgnIQZLFuTs5tAmSbI2ReEFElSnCpKjFqn5SSI3EEAEdBVwbUWJn8V+Julv+hFB4SRoXDnWRlOBOJEt/YNHsvSUmYwnWJtPaaXByattcHVGx0JrTS4hMCcnPnIePS4D8b+9uJKwbGbc3MOn4UpRZvye6/wGNlDP8coJB8QAAAABJRU5ErkJggg=="/></g></g></svg>
+                            <img src="./svg/process/flask.svg" class="process-list__img" alt="list__icon">
                         </div>
                         <h4 class="process-list__title">
                             3.magic touch
@@ -129,7 +147,7 @@
                     </li>
                     <li class="process-list__item">
                         <div class="process-list__icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="48" viewBox="0 0 28 48"><g><g><image width="28" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAwCAYAAAACYxrZAAAEnElEQVRYR+2YZ8yeUxjHf40Ro7XpMKNodaTRhCJWCb7gRUlskaJRqkaJvT5YLWLV7AeChFTQEHvFSiNih1ZbK4pGjFbEJr/kOm/Oe/c+z9379X6SXt+ePOec/7nm/3/ufqyYbQ5sDfwMvAv8mW1bHRgALAX+aDquX8OCccBNwE7Zuh+AG4CngIuA/YA1gN+BZ4DzgQ9K53YC3At4AlgL+Bx4HRgC7Aaskh2o158CW4WnAh8OzKkDLQH2Bz4BBgFXAZdkYRwDPA5sClwMzAB+Awyt3l0K/AJsD3xZBS0BHgXcD7wM6GnVNgYGFkJ3D3BcXPSCJsChwLHABGAUcC4wvakQKv/vAzwHvA0cDXyU/5976G0uA1bLFhwCPNoScDTwXrbnNeDUqG4S4JSoRhN+YxTLT8A7LcFcbkGdBwwD9gS2ADxLz98S0Cr8ClgH2D/C0YRjMf0K/NiwcFXgGuCs8HqsgAcBj4VXB3Q4YM2owpOiel1qJd8C3Ar8Vdgrhvm0usf74xRgJnA9cHZhk5PkWcBB8HcAeXuLTHsIOAL4p7Df1jLMUwTsisKwyUse3g5MipseCcyLg73AbGAzYBpwXQHwZuA0nRPQ3NmgNntdDtcFvg3PtgEWVw7dJaaQZ1ggVVsP+Dj6dlSq0stjmlhNG8ThaaOV9lLMSS9UZ58BW0ZuvVwyp8+TwN4x6roENBcfAtsB9wLHV07cIybOC1HadYBfADKKE+i7bIGz1zkrsEPgAQEPBR62R6IoqtVmSL+O/toW8PDcUgQWAoa8ahOBu4H5wHABHb5W5xnR9HUeSFEOB2nHOft+LJI5rNDBwGTgtkLIzaGDYKSAqYJOBGYVNlhQtsXO8b/eOFGkJO0R4LBK7vOj/P/g1IcC3RXlLY+VTJJ1mJ8c1OQ6PdZ7L2p/1plOGZGRwAh/WLaLgPWBMyOspQZOB5pXcy35NlkaLOZwWGoL6ejBCJN/vBFFZLjbmlVv6DcMmjsmDjCkc3J6cprLFLqezM2lGVm6iGF3YCdbFlPGluump3yzpf1ijCur75uWLt4RebZvlSIqhyXpjJLEuC8a9ULgyhpA20G56O1zs8FlEEfc2Ji9PRaUAHeMPLrY/rszQmthXR0evBnqTEWnrR0tdkIHLVQb0nSjqaE/vdT3ERbpKJcgqrVXQ6XJHJvEaNs9BvZywWkSwuMBw6pys9FV15L1tUFXji2JWbOVFMenAwtKeW8CTPv0ymkjm+QNrjyRya1mObK7ONoCypEK3R4Sr0W1Do/qXk7zlDyUxWWREaVcdAA3j4oyOXTf6roSoH1o3syhG9uYA10OVGLusBIwRWBlSDsV0f+jaDaKUZdr0OR1n3vo++/50JoK47mV+PYpoI38dAhecZytBwKvZKB9Bij9CKaAkh+dk8oJPyAIKsNrfQKYgyl2fUJLR+kZloP+Z0C/OqlN9CwHS1HMQRXDMkyvZ+kV8e6T95SMqoA6zZpeX34jOCfUX6+Gd/JCHeNHn07mC1dvvZAs1GvAFQFLF0mg/m4F6LcZn+JtwKqgtopvyx5WImDf7ArituSbDt81WD9JyG7QfwEfpy0WmVqL3wAAAABJRU5ErkJggg=="/></g></g></svg>
+                            <img src="./svg/process/reward.svg" class="process-list__img" alt="list__icon">
                         </div>
                         <h4 class="process-list__title">
                             4. award winnıng
@@ -188,6 +206,18 @@
         <section class="section testimonials">
             <div class="container">
                 <ul class="testimonials-list">
+                    <li class="testimonials-list__item">
+                        <div class="section__header">
+                            <h2 class="section__title">What Our Customers Think</h2>
+                        </div>
+                        <div class="testimonials-list__testimonial">
+                            <p class="testimonials-list__text">
+                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. 
+                                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor gravida at eget metus. 
+                            </p>
+                            <span class="testimonials-list__author">Barclay Widerski</span>
+                        </div>
+                    </li>
                     <li class="testimonials-list__item">
                         <div class="section__header">
                             <h2 class="section__title">What Our Customers Think</h2>
@@ -375,5 +405,7 @@
             <div class="container"></div>
         </div>
     </footer>
+    <script src="./script/lib.min.js"></script>
+    <script src="./script/common.js"></script>
 </body>
 </html>

@@ -43,8 +43,8 @@ body {
 }
 
 .section {
-    padding-bottom: 75px;
-    padding-top: 75px;
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem;
     &__header {
         color: inherit;
         display: flex;
@@ -83,5 +83,24 @@ body {
     }
     &__description {
         margin-bottom: 30px;
+        line-height: 1.78;
+    }
+}
+
+@media screen and (max-width: 992px)  {
+    .section {
+        &__header {
+            max-width: 590px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding-bottom: 5rem;
+        padding-top: 5rem;
+        &__title {
+            margin-bottom: 15px;
+        }
     }
 }
